@@ -1,0 +1,12 @@
+{% extends 'app/home.html' %}
+
+{% block main %}
+  <div class="row">
+      <div class="col s12">
+        <h1 class="col s12">Каталог компьютеров Apple</h1>
+        {% for item in items %}
+          {% include 'app/example_item.html' with img=item.img title=item.title text=item.text %}
+        {% endfor %}
+      </div>
+    </div>
+{% endblock %}
